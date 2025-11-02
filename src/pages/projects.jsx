@@ -141,7 +141,7 @@ function Projects() {
           <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="subtle-button">
             Resume
           </a>
-          <a href="https://github.com/theDude03?tab=repositories" target="_blank" rel="noopener noreferrer" className="subtle-button">
+          <a href="https://github.com/theDude03" target="_blank" rel="noopener noreferrer" className="subtle-button">
             GitHub
           </a>
         </div>
