@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react-swc'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '03nhanwork.github.io', // Add this line
+  base: 'my-portfolio', // Add this line
 })
