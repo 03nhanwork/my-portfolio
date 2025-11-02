@@ -1,0 +1,38 @@
+.top-nav {
+  width: 100%;
+  background-color: transparent; /* You can set a background color if you like */
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+}
+
+.top-nav ul {
+  list-style-type: none; /* This removes the bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* This makes the list items appear side-by-side */
+  gap: 2rem; /* This adds space between your navigation items */
+}
+
+.top-nav li {
+  margin: 0;
+}
+
+.top-nav a {
+  color: #333; /* Adjust color to fit your design */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s ease; /* This creates the color changing animation */
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+  color: #007bff; /* This is the color the link will change to on hover */
+}
+
+.top-nav a.active {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 3px; /* Adjust padding to make space for the border */
+}

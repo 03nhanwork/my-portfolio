@@ -1,0 +1,174 @@
+.experience-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.top-nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.experience-main-content {
+  flex-grow: 1;
+  padding: 60px 20px 40px;
+  margin-left: 80px; /* Adjust for SideNav width */
+  transition: margin-left 0.3s ease;
+}
+
+.experience-main-content h1 {
+  text-align: center;
+  font-size: clamp(2rem, 8vw, 2.5rem); /* Fluid font size */
+  margin: 40px;
+  color: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  align-items: stretch; /* This makes cards in the same row have equal height */
+}
+
+.card {
+  background-color: #3a3a3a;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #4f4f4f;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:nth-child(even) {
+  background-color: #4a4a4a; /* A slightly lighter gray for every other card */
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(52, 152, 219, 0.2);
+  border-color: #3498db;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1; /* Allows the description to expand and fill available space */
+}
+
+.card-skills {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: #4f4f4f;
+  color: #c7c7c7;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.card-button:hover {
+  background-color: #2980b9;
+}
+
+.card-button.secondary {
+  background-color: #555;
+  color: #ddd;
+}
+
+.card-button.secondary:hover {
+  background-color: #666;
+}
+
+/* Responsive adjustments for the column layout */
+@media (max-width: 992px) {
+  .experience-main-content {
+    margin-left: 0; /* Assuming SideNav might be hidden or different on tablets */
+    padding: 80px 20px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* Switch to a single column on small screens */
+  }
+
+  .experience-main-content {
+    padding: 60px 15px 30px;
+  }
+}
+
+.page-bottom-buttons {
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.subtle-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #a0a0a0;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #555;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-weight: bold;
+}
+
+.subtle-button:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+  border-color: #777;
+}
